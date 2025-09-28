@@ -37,8 +37,8 @@ class CalendarsController < ApplicationController
 
       # ← ここで曜日を算出
       wday_num = (@todays_date + x).wday
-      
-      days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => today_plans,wday: wdays[wday_num]}# ← 追加！
+
+      days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: today_plans, wday: wdays[wday_num] }# ← 追加&シンボル型に変更！
       @week_days.push(days)
     end
 
